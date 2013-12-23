@@ -114,6 +114,12 @@
                     done: function (e, data) {
                         /*jslint unparam:true*/
                         self.complete(data.result);
+                    },
+                    start: function () {
+                        $('.js-button-accept').prop('disabled', true);
+                    },
+                    success: function () {
+                        $('.js-button-accept').prop('disabled', false);
                     }
                 });
             },
